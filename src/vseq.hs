@@ -4,6 +4,8 @@ ds a b c = b ^ 2 - 4 * a * c
 xs a b c =
   let
     dsc = sqrt (ds a b c)
-    x1 = (-b + dsc) / (2 * a)
-    x2 = (-b - dsc) / (2 * a)
+    x1 = (-b + dsc) / 2 * a
+    x2 = (-b - dsc) / 2 * a
   in (x1, x2)
+
+mapX y z = map (\x -> xs x y z) [1..10]
